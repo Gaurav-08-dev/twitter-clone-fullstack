@@ -1,0 +1,36 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/twitter-client/node_modules
+/twitter-server/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/twitter-client/coverage
+
+# next.js
+/twitter-client/.next/
+/twitter-client/out/
+
+# production
+/twitter-client/build
+
+# misc
+/twitter-client/.DS_Store
+/twitter-client/*.pem
+
+# debug
+/twitter-client/npm-debug.log*
+/twitter-client/yarn-debug.log*
+/twitter-client/yarn-error.log*
+
+# local env files
+/twitter-client/.env*.local
+
+# vercel
+/twitter-client/.vercel
+
+# typescript
+/twitter-client/*.tsbuildinfo
+/twitter-client/next-env.d.ts
