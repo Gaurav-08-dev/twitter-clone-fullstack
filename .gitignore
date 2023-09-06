@@ -15,6 +15,8 @@
 
 # production
 /twitter-client/build
+/twitter-server/build
+
 
 # misc
 /twitter-client/.DS_Store
@@ -27,6 +29,7 @@
 
 # local env files
 /twitter-client/.env*.local
+/twitter-server/.env*.local
 
 # vercel
 /twitter-client/.vercel
