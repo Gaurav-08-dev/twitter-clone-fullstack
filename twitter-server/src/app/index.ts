@@ -2,6 +2,8 @@ import express from "express";
 import bodyParser from "body-parser";
 import { ApolloServer } from "@apollo/server";
 import { expressMiddleware } from "@apollo/server/express4";
+import { PrismaClient } from "@prisma/client";
+import { User } from "./user";
 
 export async function initServer() {
   const app = express();
@@ -10,16 +12,14 @@ export async function initServer() {
 
   const graphqlServer = new ApolloServer({
     typeDefs: `
+    ${User.types}
     type Query {
-        sayHello: String
-        giveName(name:String!): String!
+        ${User.queries}
     } 
-    
     `,
     resolvers: {
       Query: {
-        sayHello: () => "Hey from graphQl",
-        giveName: (parent:any ,{name}: {name:string}) => `Hey ${name}`
+        ...User.resolvers.queries
       },
     },
   });
