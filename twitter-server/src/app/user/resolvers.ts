@@ -21,6 +21,7 @@ interface GoogleTokenResult {
   kid?: string;
   typ?: string;
 }
+
 const queries = {
   verifyGoogleToken: async (parent: any, { token }: { token: string }) => {
     const googleToken = token;
